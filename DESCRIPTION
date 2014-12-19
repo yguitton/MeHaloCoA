@@ -1,0 +1,16 @@
+Package: MeHaloCoA
+Type: Package
+Title: Fast identification of Cl or Br containing compounds in LC-MS
+Version: 0.99.0
+Date: 2014-12-09
+Author: Yann GUITTON, Catherine Roullier
+Maintainer: Yann GUITTON <yann.guitton@gmail.com>
+Description: Fast identification of Chlorinated or Brominated compounds in high-resolution LC-MS based on isotopic profile and mass defect.This can be done on a scan by scan basis, or after peakpicking with xcms and CAMERA. With the Graphical user Interface available no command lines are needed.
+Depends: R (>= 3.1.0), CAMERA, tcltk, mzR
+Enhances: RMassBank
+SystemRequirements: tcl/tk, BWidget
+Suggests: metaMS
+License: GPL (>=2)
+URL: http://yguitton.github.io/MeHaloCoA/ and https://github.com/yguitton/MeHaloCoA
+BugReports:https://github.com/yguitton/MeHaloCoA/issues/new/
+biocViews: MassSpectrometry, Metabolomics

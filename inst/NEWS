@@ -1,0 +1,4 @@
+ChangLog for MeHaloCoA
+Version: 0.99.0
+change of version numbering to be BioC compatible
+remove attach() in ZZZ.R

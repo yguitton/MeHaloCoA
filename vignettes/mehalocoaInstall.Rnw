@@ -1,0 +1,44 @@
+%
+% NOTE -- ONLY EDIT THE .Rnw FILE!!!  The .tex file is
+% likely to be overwritten.
+%
+%\VignetteIndexEntry{Installation Instructions for MeHaloCoA}
+%\VignetteDepends{}
+%\VignetteKeywords{install}
+%\VignettePackage{MeHaloCoA}
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+
+\newcommand{\Robject}[1]{{\texttt{#1}}}
+\newcommand{\Rfunction}[1]{{\texttt{#1}}}
+\newcommand{\Rpackage}[1]{{\textit{#1}}}
+\newcommand{\Rclass}[1]{{\textit{#1}}}
+\newcommand{\Rmethod}[1]{{\textit{#1}}}
+\newcommand{\Rfunarg}[1]{{\textit{#1}}}
+
+\textwidth=6.2in
+\textheight=8.5in
+%\parskip=.3cm
+\oddsidemargin=.1in
+\evensidemargin=.1in
+\headheight=-.3in
+
+\begin{document}
+\title{Installation Instructions for MeHaloCoA}
+\author{Yann GUITTON}
+\maketitle
+
+\section*{Introduction}
+
+This document describes how to install \Rpackage{MeHaloCoA} and, if
+necessary, also obtain and install \texttt{R}. The \Rpackage{MeHaloCoA}
+package includes test data and a Graphical User Interface. That GUI allows 
+users to launch any steps of the process with one command line \texttt{runGUI}
+
+More information on \Rpackage{MeHaloCoA} package are currently available 
+from \url{http://www.bioconductor.org/} and http://yguitton.github.io/MeHaloCoA/
+
+
+
+\end{document}
