@@ -217,7 +217,7 @@ function(method="")
         
         mydudi <- eval.parent(cmd)
         #bringToTop(which=-1)
-        assign(eval(dudiname), mydudi, envir=as.environment(MeHaloCoAenv))
+        assign(eval(dudiname), mydudi, envir=as.environment("MeHaloCoAenv"))
     
     
         
@@ -226,7 +226,7 @@ function(method="")
     tkdestroy(tt)
     
             
-            if (exists(tclvalue(anvar), envir=as.environment(MeHaloCoAenv))){
+            if (exists(tclvalue(anvar), envir=as.environment("MeHaloCoAenv"))){
                 res<-tclvalue(tkmessageBox(title="Done",message= "Peakpicking Step is Done",icon="info",type="okcancel"))
                 Sys.sleep(0.5)
                 if(res=="ok"){
