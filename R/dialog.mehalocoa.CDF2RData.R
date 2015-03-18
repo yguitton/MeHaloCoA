@@ -493,7 +493,7 @@ cat("working with centWave")
         
         mydudi <- eval.parent(cmd)
         #bringToTop(which=-1)
-        assign(eval(dudiname), mydudi, envir=as.environment(MeHaloCoAenv))
+        assign(eval(dudiname), mydudi, envir=as.environment("MeHaloCoAenv"))
     
     
         
@@ -502,7 +502,7 @@ cat("working with centWave")
     tkdestroy(tt)
     
             
-            if (exists(tclvalue(anvar), envir=as.environment(MeHaloCoAenv))){
+            if (exists(tclvalue(anvar), envir=as.environment("MeHaloCoAenv"))){
                 res<-tclvalue(tkmessageBox(title="Done",message= "Peakpicking Step is Done",icon="info",type="okcancel"))
                 Sys.sleep(0.5)
                 if(res=="ok"){
