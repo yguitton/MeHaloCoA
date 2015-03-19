@@ -152,12 +152,12 @@ if(method==""){
         tkdestroy(tt)
            
         #test if xsAnnotate object exists in MeHaloCoAenv or .GlobalEnv
-        if(length(which(ls("MeHaloCoAenv")==tclvalue(xsAnnotatevar)))==0){
+        if(length(which(ls(MeHaloCoAenv)==tclvalue(xsAnnotatevar)))==0){
             an<-get(ls(.GlobalEnv)[which(ls(.GlobalEnv)==tclvalue(xsAnnotatevar))], envir=as.environment(.GlobalEnv))
             print("Note: Use of an xsAnnotate object from GlobalEnv as entry")
         }else
         {
-            an<-get(ls("MeHaloCoAenv")[which(ls("MeHaloCoAenv")==tclvalue(xsAnnotatevar))], envir=as.environment(MeHaloCoAenv))
+            an<-get(ls(MeHaloCoAenv)[which(ls(MeHaloCoAenv)==tclvalue(xsAnnotatevar))], envir=as.environment(MeHaloCoAenv))
         }
 
         if((class(an)=="xsAnnotate")==FALSE){
