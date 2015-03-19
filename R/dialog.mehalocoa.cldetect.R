@@ -177,7 +177,7 @@ if(method==""){
      # pdf(file=file.path(outdir,"IFC%03d.pdf"))
           mat<-list()
           for (i in 1:length(xsAnnotate)){
-            MeHaloCoAenv$matcl[[i]]<-do.call(cldetect,c(outdir=outdir,xsAnnotate=xsAnnotate[[i]],list( 
+            MeHaloCoAenv$matcl[[i]]<<-do.call(cldetect,c(outdir=outdir,xsAnnotate=xsAnnotate[[i]],list( 
             plotps=tclvalue(plotpsvar),
             deprof=tclvalue(deprofvar),
          #   clppmerr=as.numeric(tclvalue(clppmerrvar)),
@@ -196,9 +196,9 @@ if(method==""){
           }
     dev.off()
             for (i in 1:length(MeHaloCoAenv$matcl)){
-                MeHaloCoAenv$matcl[[i]]<-cbind(basename(xsAnnotate[[i]]@xcmsSet@filepaths),MeHaloCoAenv$matcl[[i]])
-                MeHaloCoAenv$matcl[[i]] <- data.frame(lapply(MeHaloCoAenv$matcl[[i]], as.character), stringsAsFactors=FALSE)
-                colnames(MeHaloCoAenv$matcl[[i]])[1]<-"File"
+                MeHaloCoAenv$matcl[[i]]<<-cbind(basename(xsAnnotate[[i]]@xcmsSet@filepaths),MeHaloCoAenv$matcl[[i]])
+                MeHaloCoAenv$matcl[[i]] <<- data.frame(lapply(MeHaloCoAenv$matcl[[i]], as.character), stringsAsFactors=FALSE)
+                colnames(MeHaloCoAenv$matcl[[i]])[1]<<-"File"
             }
             mat<-do.call("rbind",MeHaloCoAenv$matcl)
             
@@ -453,8 +453,11 @@ if(method=="scan"){
     
           mat<-list()
           for (i in 1:length(samples)){
+          
+          #debugg
+          print(paste("sample:",sample[i]))
         #   scanrange=NULL
-            MeHaloCoAenv$matcl[[i]]<-do.call(cldetect.scan,c(outdir=outdir,file=samples[[i]],list( 
+            MeHaloCoAenv$matcl[[i]]<<-do.call(cldetect.scan,c(outdir=outdir,file=samples[[i]],list( 
             # plotps=tclvalue(plotpsvar),
             deprof=tclvalue(deprofvar),
            noise=as.numeric(tclvalue(noisevar)),
@@ -473,9 +476,9 @@ if(method=="scan"){
           }
     dev.off()
             for (i in 1:length(MeHaloCoAenv$matcl)){
-                MeHaloCoAenv$matcl[[i]]<-cbind(basename(samples[[i]]),MeHaloCoAenv$matcl[[i]])
-                MeHaloCoAenv$matcl[[i]] <- data.frame(lapply(MeHaloCoAenv$matcl[[i]], as.character), stringsAsFactors=FALSE)
-                colnames(MeHaloCoAenv$matcl[[i]])[1]<-"File"
+                MeHaloCoAenv$matcl[[i]]<<-cbind(basename(samples[[i]]),MeHaloCoAenv$matcl[[i]])
+                MeHaloCoAenv$matcl[[i]] <<- data.frame(lapply(MeHaloCoAenv$matcl[[i]], as.character), stringsAsFactors=FALSE)
+                colnames(MeHaloCoAenv$matcl[[i]])[1]<<-"File"
             }
             mat<-do.call("rbind",MeHaloCoAenv$matcl)
             
