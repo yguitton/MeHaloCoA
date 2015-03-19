@@ -70,7 +70,7 @@ if(!is.na(match("mzrange",names(settingslist)))){
             xset[[i]]@peaks<-xset1[[i]]
         }
     rm(xset1)
-    assign("xset",xset,envir = as.environment(MeHaloCoAenv))
+    assign("xset",xset,envir = as.environment("MeHaloCoAenv"))
 }
   an<-lapply(xset,
          function(x) {

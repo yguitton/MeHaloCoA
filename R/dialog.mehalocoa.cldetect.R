@@ -170,7 +170,7 @@ if(method==""){
 
     if (length(xsAnnotate)>1){  
       print("several files")
-       assign("matcl",vector(mode="list", length=length(xsAnnotate)), envir=as.environment(MeHaloCoAenv))
+       assign("matcl",vector(mode="list", length=length(xsAnnotate)), envir=as.environment("MeHaloCoAenv"))
        
        #projectpdf is a function that avoid overwriting IFC.pdf
       projectpdf(dir=outdir,projectName="IFC", ext="pdf")
