@@ -1,8 +1,8 @@
 Package: MeHaloCoA
 Type: Package
 Title: Fast identification of Cl or Br containing compounds in LC-MS
-Version: 0.99.1
-Date: 2015-03-18
+Version: 0.99.2
+Date: 2015-03-19
 Author: Yann GUITTON, Catherine Roullier
 Maintainer: Yann GUITTON <yann.guitton@gmail.com>
 Description: Fast identification of Chlorinated or Brominated compounds in high-resolution LC-MS based on isotopic profile and mass defect.This can be done on a scan by scan basis, or after peakpicking with xcms and CAMERA. With the Graphical user Interface available no command lines are needed.
