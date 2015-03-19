@@ -157,7 +157,7 @@ if(method==""){
             print("Note: Use of an xsAnnotate object from GlobalEnv as entry")
         }else
         {
-            an<-get(ls("MeHaloCoAenv")[which(ls("MeHaloCoAenv")==tclvalue(xsAnnotatevar))], envir=as.environment("MeHaloCoAenv"))
+            an<-get(ls("MeHaloCoAenv")[which(ls("MeHaloCoAenv")==tclvalue(xsAnnotatevar))], envir=as.environment(MeHaloCoAenv))
         }
 
         if((class(an)=="xsAnnotate")==FALSE){
@@ -170,7 +170,7 @@ if(method==""){
 
     if (length(xsAnnotate)>1){  
       print("several files")
-       assign("matcl",vector(mode="list", length=length(xsAnnotate)), envir=as.environment("MeHaloCoAenv"))
+       assign("matcl",vector(mode="list", length=length(xsAnnotate)), envir=as.environment(MeHaloCoAenv))
        
        #projectpdf is a function that avoid overwriting IFC.pdf
       projectpdf(dir=outdir,projectName="IFC", ext="pdf")
@@ -222,7 +222,7 @@ if(method==""){
           myfile2=tclvalue(myfile2var),
           m1need=tclvalue(m1needvar)
         )
-        )), envir=as.environment("MeHaloCoAenv"))
+        )), envir=as.environment(MeHaloCoAenv))
       dev.off()
     }
                 
@@ -446,7 +446,7 @@ if(method=="scan"){
     
     if (length(samples)>1){  
       print("several files")
-       assign("matcl",vector(mode="list", length=length(samples)), envir=as.environment("MeHaloCoAenv"))
+       assign("matcl",vector(mode="list", length=length(samples)), envir=as.environment(MeHaloCoAenv))
        
      
       projectpdf(dir=outdir,projectName="IFC", ext="pdf")
@@ -503,7 +503,7 @@ if(method=="scan"){
           myfile2=tclvalue(myfile2var),
           m1need=tclvalue(m1needvar)
         )
-        )), envir=as.environment("MeHaloCoAenv"))
+        )), envir=as.environment(MeHaloCoAenv))
       dev.off()
     }
                 
