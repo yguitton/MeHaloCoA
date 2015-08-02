@@ -85,7 +85,7 @@ library(MeHaloCoA)
 data(xcmsSettings) #load peak picking parameters
 data(cldetectSettings) #load halogens detection parameters
 
-myfile<-file.path(system.file("doc/mzData", package="MeHaloCoA"),"Q-ToF_Data1.mzData")
+myfile<-file.path(system.file("extdata", package="MeHaloCoA"),"Q-ToF_Data1.mzData")
 an<-CDF2RData(files=myfile, settingslist=xcmsSettings)
 result<-cldetect.pcgroup(outdir=getwd(),xsAnnotate=an[[1]],pcgroup=1, plotps=TRUE, deprof=FALSE,
   Thresh=30, m1=1.0030, m2=1.997, mdiff=0.05, ppmerr=50, val="into",

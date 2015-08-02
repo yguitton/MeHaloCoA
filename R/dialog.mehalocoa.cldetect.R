@@ -283,7 +283,7 @@ if(method=="scan"){
         
         
         outdirvar <- tclVar(as.character(getwd()))
-        indirvar <- tclVar(as.character(system.file("doc/mzData", package="MeHaloCoA"))) # 
+        indirvar <- tclVar(as.character(system.file("extdata", package="MeHaloCoA"))) # 
         matclvar<-tclVar("matcl")
     #
     # Variable for number fields

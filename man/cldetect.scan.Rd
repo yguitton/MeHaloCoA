@@ -83,7 +83,7 @@ runGUI()
 library(MeHaloCoA)
 
 #No peakpicking needed 
-myfile=file.path(system.file("doc/mzData", package="MeHaloCoA"),"Q-ToF_Data1.mzData")
+myfile=file.path(system.file("extdata", package="MeHaloCoA"),"Q-ToF_Data1.mzData")
 result<-cldetect.scan(outdir=getwd(),file=myfile)
 }
 }

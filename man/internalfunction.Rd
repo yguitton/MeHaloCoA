@@ -11,6 +11,7 @@ Internal functions for the MeHaloCoA package
 }
 \details{
 These are not to be called by the user.
+
 }
 \author{
 Yann GUITTON

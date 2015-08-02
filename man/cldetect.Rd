@@ -80,7 +80,7 @@ library(MeHaloCoA)
 
 #do the peak picking
 data(xcmsSettings) #load peak picking parameters
-an<-CDF2RData(indir = system.file("doc/mzData", package="MeHaloCoA"), settingslist=xcmsSettings)
+an<-CDF2RData(indir = system.file("extdata", package="MeHaloCoA"), settingslist=xcmsSettings)
 #if indir="", interactive selection of data directory
 
 #do isotopic profile search

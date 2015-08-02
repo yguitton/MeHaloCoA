@@ -22,7 +22,7 @@ function(method="")
 # Variables for text fields
 #
     
-    indirvar <- tclVar(as.character(system.file("doc/mzData", package="MeHaloCoA"))) # 
+    indirvar <- tclVar(as.character(system.file("extdata", package="MeHaloCoA"))) # 
     infilevar<-tclVar() # fichier selectionne un par un et pas en bloque
     outdirvar <- tclVar(as.character(getwd()))
     #rbValue <- tclVar()
@@ -126,7 +126,7 @@ function(method="")
 ################################
     "reset" <- function()
     {
-        tclvalue(indirvar)<-tclVar(as.character(system.file("doc/mzData", package="MeHaloCoA")))
+        tclvalue(indirvar)<-tclVar(as.character(system.file("extdata", package="MeHaloCoA")))
         tclvalue(anvar)<-"an"
         tclvalue(outdirvar)<-getwd()
         tclvalue(snthreshvar)<-3
@@ -291,7 +291,7 @@ cat("working with centWave")
 # Variables for text fields
 #
     
-    indirvar <- tclVar(as.character(system.file("doc/mzData", package="MeHaloCoA"))) # 
+    indirvar <- tclVar(as.character(system.file("extdata", package="MeHaloCoA"))) # 
     infilevar<-tclVar() # fichier selectionne un par un et pas en bloque
     outdirvar <- tclVar(as.character(getwd()))
     #rbValue <- tclVar()
@@ -406,7 +406,7 @@ cat("working with centWave")
 ################################
     "reset" <- function()
     {
-        tclvalue(indirvar)<-tclVar(as.character(system.file("doc/mzData", package="MeHaloCoA")))
+        tclvalue(indirvar)<-tclVar(as.character(system.file("extdata", package="MeHaloCoA")))
         tclvalue(anvar)<-"an"
         tclvalue(outdirvar)<-getwd()
         tclvalue(snthreshvar)<-3

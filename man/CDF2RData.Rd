@@ -50,11 +50,11 @@ runGUI()
 \dontrun{
 ## Not run:
 data(xcmsSettings)
-an<-CDF2RData(indir = system.file("doc/mzData", package="MeHaloCoA"), settingslist=xcmsSettings)
+an<-CDF2RData(indir = system.file("extdata", package="MeHaloCoA"), settingslist=xcmsSettings)
 
 ## or with files option
 data(xcmsSettings)
-myfile<-file.path(system.file("doc/mzData", package="MeHaloCoA"),"Q-ToF_Data1.mzData")
+myfile<-file.path(system.file("extdata", package="MeHaloCoA"),"Q-ToF_Data1.mzData")
 an<-CDF2RData(files=myfile, settingslist=xcmsSettings)
 }
 }
