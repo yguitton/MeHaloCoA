@@ -173,7 +173,7 @@ if(method==""){
        assign("matcl",vector(mode="list", length=length(xsAnnotate)), envir=as.environment(MeHaloCoAenv))
        
        #projectpdf is a function that avoid overwriting IFC.pdf
-      projectpdf(dir=outdir,projectName="IFC", ext="pdf")
+      .projectpdf(dir=outdir,projectName="IFC", ext="pdf")
      # pdf(file=file.path(outdir,"IFC%03d.pdf"))
           mat<-list()
           for (i in 1:length(xsAnnotate)){
@@ -205,7 +205,7 @@ if(method==""){
             write.table(mat, file=file.path(outdir, tclvalue(myfile2var)), row.names=FALSE, sep="\t")
     }
     else{
-      projectpdf(dir=outdir,projectName="IFC", ext="pdf")
+      .projectpdf(dir=outdir,projectName="IFC", ext="pdf")
       # pdf(file=file.path(outdir,"IFC%03d.pdf"))
         assign(tclvalue(matclvar), do.call(cldetect,c(outdir=outdir,xsAnnotate=xsAnnotate,list( 
           plotps=tclvalue(plotpsvar),
@@ -449,7 +449,7 @@ if(method=="scan"){
        assign("matcl",vector(mode="list", length=length(samples)), envir=as.environment(MeHaloCoAenv))
        
      
-      projectpdf(dir=outdir,projectName="IFC", ext="pdf")
+      .projectpdf(dir=outdir,projectName="IFC", ext="pdf")
     
           mat<-list()
           for (i in 1:length(samples)){
@@ -482,7 +482,7 @@ if(method=="scan"){
             write.table(mat, file=file.path(outdir, tclvalue(myfile2var)), row.names=FALSE, sep="\t")
     }
     else{
-      projectpdf(dir=outdir,projectName="IFC", ext="pdf")
+      .projectpdf(dir=outdir,projectName="IFC", ext="pdf")
       
         assign(tclvalue(matclvar), do.call(cldetect.scan,c(outdir=outdir,file=samples[[1]],list( 
           # plotps=tclvalue(plotpsvar),
