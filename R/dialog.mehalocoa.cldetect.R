@@ -3,7 +3,7 @@
 #       Dray <dray@biomserv.univ-lyon1.fr>
 #cldetect function dialog frame
 
-dialog.mehalocoa.cldetect <-
+.dialog.mehalocoa.cldetect <-
 function(method="")
 {
 

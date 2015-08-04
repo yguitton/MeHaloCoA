@@ -1,6 +1,6 @@
 
 #function modified from CAMERA package
-#hits<-findNeutralLoss.scan(file, mzdiff = 18.01, mzabs = 0.01, mzppm = 5, noise=500)
+#hits<-.findNeutralLoss.scan(file, mzdiff = 18.01, mzabs = 0.01, mzppm = 5, noise=500)
 
 #function addapted from findNeutralLoss in CAMERA package
 # @param file your complet path to your file (mzXML or CDF, mzML, mzData)
@@ -8,7 +8,7 @@
 # @param mzabs max difference allowed in Da
 # @param mzppm max difference allowed in ppm
 # @param noise level of noise above which an ion is concidered for calculations default 500 count
-findNeutralLoss.scan<-
+.findNeutralLoss.scan<-
 function (file, mzdiff = NULL, mzabs = 00.5, mzppm = 10, noise=500, N=NULL, scanrange=NULL) 
 {
 plotSpec1<-function(object, ...) {

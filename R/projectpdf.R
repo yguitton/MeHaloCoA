@@ -1,7 +1,7 @@
 #Code modified from 
 #http://stackoverflow.com/questions/23862306/stop-r-from-overwriting-graphics-files
 
-projectpdf <- function(projectName, dir,ext="pdf", ...) {
+.projectpdf <- function(projectName, dir,ext="pdf", ...) {
   # get a list of existing plots for the project
     plots <- list.files(path=dir, pattern=paste0(projectName))
   # pull out numeric component of the plot files

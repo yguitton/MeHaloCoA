@@ -32,7 +32,7 @@ hits <- findNeutralLossSpecs(an, mzdiff=m2, mzabs=mdiff, mzppm=ppmerr)
 good<-which(hits==TRUE)
 #go to raw data to double check 
 if (length(good)<length(an@pspectra)){
-    hitraw<-findNeutralLoss.scan(file=an@xcmsSet@filepath, mzdiff=m2, mzabs=mdiff, mzppm=ppmerr) 
+    hitraw<-.findNeutralLoss.scan(file=an@xcmsSet@filepath, mzdiff=m2, mzabs=mdiff, mzppm=ppmerr) 
     if (length(hitraw)>length(hits)){
         print("additionnal spectra found!")
     }
@@ -193,7 +193,7 @@ if (plotps==TRUE && length(good[which(ls_good2>=1)])>=1){
 #outdirbasicGCplot for outputs just to keep track off the name
 outdirbasicGCplot<-file.path(path,paste("EICs_Results_",format(Sys.time(), "%Y_%B_%d_%Hh%M"),sep=""))
 #plot pspectra and EICs for good peaks
-    basicGCplot(outdir=path,xsAnnotate=an,pspecrange= as.vector(good[which(ls_good2>=1)]), check="")
+    .basicGCplot(outdir=path,xsAnnotate=an,pspecrange= as.vector(good[which(ls_good2>=1)]), check="")
     
 #if bug change an@xcmsSet@filepaths<-"path to your  file"
 #Plot IFC

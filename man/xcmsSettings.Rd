@@ -15,6 +15,9 @@ you can add mzrange for ex mzrange=c(100,1000) or/and rtrange (in minutes) rtran
 \details{
 The base of the settings are taken from \emph{metaMS} package see references
 }
+\value{
+Nothing
+}
 \source{
 "Wehrens, R., Weingart, G., Mattivi, F., n.d. metaMS: An open-source pipeline for GC-MS-based untargeted metabolomics. Journal of Chromatography B. doi:10.1016/j.jchromb.2014.02.051"
 }

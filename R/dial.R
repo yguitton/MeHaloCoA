@@ -2,19 +2,13 @@
 # Part of the code is based on the ade4TkGUI package by Jean Thioulouse <jthioulouse@biomserv.univ-lyon1.fr>, Stephane
 #       Dray <dray@biomserv.univ-lyon1.fr>
 #
-dial <-
+.dial <-
 function()
 {
-    
-    
-    
-
 # Main dialog window with title
 #
     tt <- tktoplevel()
     tkwm.title(tt,"MeHaloCoA")
-    
-
 
 #
 # Menu setup
@@ -26,15 +20,15 @@ function()
     tkconfigure(topMenuMeHaloCoA, menu=MeHaloCoAMenu)
     
     openRecentMenu <- tkmenu(topMenuMeHaloCoA,tearoff=FALSE)
-        tkadd(openRecentMenu,"command",label="xcms::matchedFilter",    command=function() dialog.mehalocoa.CDF2RData(method="matchedFilter"))
-        tkadd(openRecentMenu,"command",label="xcms::centWave",    command=function() dialog.mehalocoa.CDF2RData(method="centWave"))
-        tkadd(openRecentMenu,"command",label="scan by scan",    command=function() dialog.mehalocoa.cldetect(method="scan"))
+        tkadd(openRecentMenu,"command",label="xcms::matchedFilter",    command=function() .dialog.mehalocoa.CDF2RData(method="matchedFilter"))
+        tkadd(openRecentMenu,"command",label="xcms::centWave",    command=function() .dialog.mehalocoa.CDF2RData(method="centWave"))
+        tkadd(openRecentMenu,"command",label="scan by scan",    command=function() .dialog.mehalocoa.cldetect(method="scan"))
                 
     
     openRecentMenu1 <- tkmenu(topMenuMeHaloCoA,tearoff=FALSE)
-        tkadd(openRecentMenu1,"command",label="cldetect",    command=function() dialog.mehalocoa.cldetect(method=""))
-        tkadd(openRecentMenu1,"command",label="cldetect.pcgroup",    command=function() dialog.mehalocoa.cldetect(method="pcgroup"))
-        tkadd(openRecentMenu1,"command",label="cldetect.scan",    command=function() dialog.mehalocoa.cldetect(method="scan"))
+        tkadd(openRecentMenu1,"command",label="cldetect",    command=function() .dialog.mehalocoa.cldetect(method=""))
+        tkadd(openRecentMenu1,"command",label="cldetect.pcgroup",    command=function() .dialog.mehalocoa.cldetect(method="pcgroup"))
+        tkadd(openRecentMenu1,"command",label="cldetect.scan",    command=function() .dialog.mehalocoa.cldetect(method="scan"))
         
     
     
@@ -65,7 +59,7 @@ function()
 #
     frame1 <- tkframe(tt, relief="groove", borderwidth=2, background="white")
 
-        labh <- tklabel(frame1, bitmap="questhead", background="white")
+    labh <- tklabel(frame1, bitmap="questhead", background="white")
     tkbind(labh, "<Button-1>", function() print(help("runGUI")))
     titre <- tklabel(frame1,text="MeHaloCoA even more easy", font="Times 14", foreground="red", background="white")
     
@@ -87,7 +81,7 @@ function()
         byscanvar <- tclVar(0)
         #button step 1 befo check box
     if(tclvalue(matchedFiltervar)==1 && tclvalue(centWavevar)==0 && tclvalue(byscanvar)==0){
-        step1.but <- tkbutton(frame1b, text="Step1- PeakPicking MF",width=20,  command=function() {dialog.mehalocoa.CDF2RData(method="matchedFilter");cat("\n MF\n")})
+        step1.but <- tkbutton(frame1b, text="Step1- PeakPicking MF",width=20,  command=function() {.dialog.mehalocoa.CDF2RData(method="matchedFilter");cat("\n MF\n")})
     }        
     
 #check box
@@ -96,35 +90,35 @@ function()
                 cat("MF ");
                 tkconfigure(scannf.cbut1,state="disabled");tkconfigure(scannf.cbut2,state="disabled");
                 tclvalue(matchedFiltervar)=1;tclvalue(centWavevar)=0;tclvalue(byscanvar)=0;
-                tkconfigure(step1.but, text="Step1- PeakPicking MF",  command=function() {dialog.mehalocoa.CDF2RData(method="matchedFilter")})
+                tkconfigure(step1.but, text="Step1- PeakPicking MF",  command=function() {.dialog.mehalocoa.CDF2RData(method="matchedFilter")})
             }else{
                 tkconfigure(scannf.cbut,state="normal");tkconfigure(scannf.cbut1,state="normal");tkconfigure(scannf.cbut2,state="normal");
                 tclvalue(matchedFiltervar)=0;tclvalue(centWavevar)=0;tclvalue(byscanvar)=0;
-                tkconfigure(step1.but, text="Step1- PeakPicking ?", command=function() {dialog.mehalocoa.CDF2RData(method="")})}, background="grey")
+                tkconfigure(step1.but, text="Step1- PeakPicking ?", command=function() {.dialog.mehalocoa.CDF2RData(method="")})}, background="grey")
                 
     scannf.cbut1 <- tkcheckbutton(frame1b,text="centWave", variable=centWavevar,
         command=function() if (tclvalue(centWavevar)==1) {
                 cat("CW ");
                 tkconfigure(scannf.cbut,state="disabled");tkconfigure(scannf.cbut2,state="disabled");
                 tclvalue(matchedFiltervar)=0;tclvalue(centWavevar)=1;tclvalue(byscanvar)=0;
-                tkconfigure(step1.but, text="Step1- PeakPicking CW", command=function() {dialog.mehalocoa.CDF2RData(method="centWave")})
+                tkconfigure(step1.but, text="Step1- PeakPicking CW", command=function() {.dialog.mehalocoa.CDF2RData(method="centWave")})
             }else{
                 tkconfigure(scannf.cbut,state="normal");tkconfigure(scannf.cbut1,state="normal");tkconfigure(scannf.cbut2,state="normal");
                 tclvalue(matchedFiltervar)=0;tclvalue(centWavevar)=0;tclvalue(byscanvar)=0;
-                tkconfigure(step1.but, text="Step1- PeakPicking ? ",  command=function() {dialog.mehalocoa.CDF2RData(method="")})}, background="grey")
+                tkconfigure(step1.but, text="Step1- PeakPicking ? ",  command=function() {.dialog.mehalocoa.CDF2RData(method="")})}, background="grey")
                 
     scannf.cbut2 <- tkcheckbutton(frame1b,text="scan by scan", variable=byscanvar,
         command=function() if (tclvalue(byscanvar)==1) {
             cat("scan ");
             tkconfigure(scannf.cbut,state="disabled");tkconfigure(scannf.cbut1,state="disabled");
             tclvalue(matchedFiltervar)=0;tclvalue(centWavevar)=0;tclvalue(byscanvar)=1;
-            tkconfigure(step1.but, text="All in one scan by scan", command=function() {dialog.mehalocoa.cldetect(method="scan")});
-            tkconfigure(step2.but, text="not needed", state="disabled",  command=function() {dialog.mehalocoa.CDF2RData(method="")})
+            tkconfigure(step1.but, text="All in one scan by scan", command=function() {.dialog.mehalocoa.cldetect(method="scan")});
+            tkconfigure(step2.but, text="not needed", state="disabled",  command=function() {.dialog.mehalocoa.CDF2RData(method="")})
         }else{
             tkconfigure(scannf.cbut,state="normal");tkconfigure(scannf.cbut1,state="normal");tkconfigure(scannf.cbut2,state="normal");
             tclvalue(matchedFiltervar)=0;tclvalue(centWavevar)=0;tclvalue(byscanvar)=0;
-            tkconfigure(step1.but, text="Step1- PeakPicking ?",  command=function() {dialog.mehalocoa.CDF2RData(method="")});
-            tkconfigure(step2.but, text="Step2- Isotopic Filter", state="normal",  command=function() {dialog.mehalocoa.cldetect(method="")})}, background="grey")
+            tkconfigure(step1.but, text="Step1- PeakPicking ?",  command=function() {.dialog.mehalocoa.CDF2RData(method="")});
+            tkconfigure(step2.but, text="Step2- Isotopic Filter", state="normal",  command=function() {.dialog.mehalocoa.cldetect(method="")})}, background="grey")
             
             
      tkconfigure(scannf.cbut1,state="disabled")
@@ -143,7 +137,7 @@ function()
 # MeHaloCoA Step 2 button
 #
     frame2 <- tkframe(tt,  borderwidth=2, background="white")
-    step2.but <- tkbutton(frame2, text="Step2- Isotopic Filter", width=20, command=function() dialog.mehalocoa.cldetect(method=""))
+    step2.but <- tkbutton(frame2, text="Step2- Isotopic Filter", width=20, command=function() .dialog.mehalocoa.cldetect(method=""))
     
     tkpack(step2.but,ipadx=25, side="top", expand="TRUE")
     tkpack(frame2, expand="TRUE", fill="x")

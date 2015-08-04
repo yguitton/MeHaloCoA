@@ -15,7 +15,7 @@ path<-outdir
     }
 
 #find pspectrum with 2 Da neutral loss for Chlorine, Bromine it is ok
-hits <- findNeutralLoss.scan(file=file, mzdiff=m2, mzabs=mdiff, noise=noise, mzppm=ppmerr, N=N, scanrange=scanrange) 
+hits <-.findNeutralLoss.scan(file=file, mzdiff=m2, mzabs=mdiff, noise=noise, mzppm=ppmerr, N=N, scanrange=scanrange) 
 if (!is.null(N)){
     good<-which(hits$hits==TRUE)
     #debug

@@ -23,6 +23,9 @@ List of 12
  $ mdiff2  : num 0.001\cr
  $ myfile2 : chr "halo_file_short.csv"\cr
 }
+\value{
+Nothing
+}
 \seealso{
 \code{\link{cldetect}}
 }

@@ -4,7 +4,7 @@
 #CDF2RData function dialog frame
 #with profmethodvar
 
-dialog.mehalocoa.CDF2RData <-
+.dialog.mehalocoa.CDF2RData <-
 function(method="")
 {
  if(method==""){
@@ -230,7 +230,7 @@ function(method="")
                 res<-tclvalue(tkmessageBox(title="Done",message= "Peakpicking Step is Done",icon="info",type="okcancel"))
                 Sys.sleep(0.5)
                 if(res=="ok"){
-                    MeHaloCoA::dialog.mehalocoa.cldetect()
+                    MeHaloCoA:::.dialog.mehalocoa.cldetect()
                 }
                 #print(get("an", envir=as.environment(MeHaloCoAenv)))
             }
@@ -506,7 +506,7 @@ cat("working with centWave")
                 res<-tclvalue(tkmessageBox(title="Done",message= "Peakpicking Step is Done",icon="info",type="okcancel"))
                 Sys.sleep(0.5)
                 if(res=="ok"){
-                    MeHaloCoA::dialog.mehalocoa.cldetect()
+                    MeHaloCoA:::.dialog.mehalocoa.cldetect()
                 }
                 #print(get("an", envir=as.environment(MeHaloCoAenv)))
             }

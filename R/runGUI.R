@@ -1,4 +1,4 @@
 runGUI<-function(){
-    dial()
+    MeHaloCoA:::.dial()
     print("<----Detection Started--->")
 }
