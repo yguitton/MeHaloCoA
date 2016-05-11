@@ -1,6 +1,7 @@
 #Version 3 June 2014 with file selection option not only all indir compatible files
 #and do.call in order to allow all possible parameters for xcmsSet if they are in settingslist
 #with mzrange or/and rtrange option
+#Much of that code is from R. Wehrens 
 
 CDF2RData <-function(indir="",outdir=NULL,files=NULL, settingslist) {
 if(is.null(indir)|| indir=="" && !is.null(files)){
