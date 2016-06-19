@@ -1,7 +1,7 @@
 Package: MeHaloCoA
 Type: Package
 Title: Fast identification of Cl or Br containing compounds in LC-MS
-Version: 0.99.2
+Version: 0.99.3
 Date: 2015-03-19
 Author: Yann GUITTON, Catherine Roullier
 Maintainer: Yann GUITTON <yann.guitton@gmail.com>
