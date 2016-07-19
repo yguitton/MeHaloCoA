@@ -20,7 +20,7 @@ biocLite("xcms")
 
 biocLite("CAMERA")
 
-#then install MeHaloCoA
+#Then install MeHaloCoA
 
 install_github("yguitton/mehalocoa")
 
