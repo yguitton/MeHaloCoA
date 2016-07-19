@@ -11,11 +11,17 @@ library(devtools)
 
 
 source("http://bioconductor.org/biocLite.R")
+
 biocLite()
+
 library(BiocInstaller)
+
 biocLite("xcms")
+
 biocLite("CAMERA")
 
-then install MeHaloCoA
+#then install MeHaloCoA
+
 install_github("yguitton/mehalocoa")
+
 library(MeHaloCoA)
