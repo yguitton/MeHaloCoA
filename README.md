@@ -22,6 +22,10 @@ biocLite("CAMERA")
 
 #Then install MeHaloCoA
 
+install.packages("devtools")
+
+library(devtools)
+
 install_github("yguitton/mehalocoa")
 
 library(MeHaloCoA)
