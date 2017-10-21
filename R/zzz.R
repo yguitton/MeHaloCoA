@@ -1,4 +1,4 @@
-.onLoad<-function(libname, pkgname){
+.onLoad<- function(libname = find.package("MeHaloCoA"), pkgname = "MeHaloCoA") 
 #create environment for results if in interactive Mode
 MeHaloCoAenv<<-new.env()
 # invisible()
@@ -11,5 +11,8 @@ if (interactive()){
 }#end .onload
  
  
-
+# Remove config environment on unload -------------------------------------
+.onUnload <- function(libname = find.package("MeHaloCoA"), pkgname = "MeHaloCoA") {
+  rm(MeHaloCoAenv,envir = globalenv())
+}
 
